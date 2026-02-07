@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class InventoryService {
@@ -17,16 +18,26 @@ public class InventoryService {
         for (Product product : products) {
             System.out.println(
                     "ID : " + product.getId() +
-                    ", Name : " + product.getName() +
-                    ", Quantity : " + product.getQuantity() +
-                    ", Price : " + product.getPrice()
+                            ", Name : " + product.getName() +
+                            ", Quantity : " + product.getQuantity() +
+                            ", Price : " + product.getPrice()
             );
         }
+    }
+
+    public boolean removeProduct(int id) {
+        Iterator<Product> iterator = products.iterator();
+        while (iterator.hasNext()) {
+            Product product = iterator.next();
+            if (product.getId() == id) {
+                iterator.remove();
+                return true;
+            }
+        }
+        return false;
     }
 
     public void updateProduct() {
     }
 
-    public void removeProduct() {
-    }
 }

@@ -37,7 +37,13 @@ public class InventoryService {
         return false;
     }
 
-    public void updateProduct() {
+    public boolean updateProductQuantity(int id, int newQuantity) {
+        for (Product product : products) {
+            if (product.getId() == id) {
+                product.setQuantity(newQuantity);
+                return true;
+            }
+        }
+        return false;
     }
-
 }

@@ -46,4 +46,16 @@ public class InventoryService {
         }
         return false;
     }
+    public boolean updateProductPrice(int id,int newPrice){
+        if(newPrice<0){
+            return false;
+        }
+        for (Product product:products){
+            if (product.getId()==id){
+                product.setPrice(newPrice);
+                return true;
+            }
+        }
+        return false;
+    }
 }

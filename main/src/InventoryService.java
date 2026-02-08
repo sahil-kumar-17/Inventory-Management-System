@@ -46,7 +46,7 @@ public class InventoryService {
         }
         return false;
     }
-    public boolean updateProductPrice(int id,int newPrice){
+    public boolean updateProductPrice(int id,double newPrice){
         if(newPrice<0){
             return false;
         }

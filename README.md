@@ -13,9 +13,6 @@ A console-based inventory management system built using Java and Object-Oriented
 - OOP
 
 ## Project Status
-In Progress
+Completed – Console Version
 
-## Future Enhancements
-- Input validation
-- Persistent storage
-- Migration to Spring Boot
+
